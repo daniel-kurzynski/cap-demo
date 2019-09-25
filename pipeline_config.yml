@@ -29,12 +29,17 @@ steps:
 
 ### Stage-specific configuration
 stages:
+  backendIntegrationTests:
+    createHdiContainer: true
+    cloudFoundry:
+      org: 'CloudApps'
+      space: 'Test'
+      apiEndpoint: 'https://api.cf.sap.hana.ondemand.com'
+      credentialsId: 'CF-DEPLOY-SAP'
 
-  # This exclude is required for the example project to be successful in the pipeline
-  # Remove it when you have added your first test
-  s4SdkQualityChecks:
-    jacocoExcludes:
-      - '**/OrdersService.class'
+  npmAudit:
+    auditedAdvisories:
+      - 1164
 
 #  integrationTests:
 #    credentials:
