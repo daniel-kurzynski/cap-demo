@@ -37,9 +37,9 @@ stages:
       apiEndpoint: 'https://api.cf.sap.hana.ondemand.com'
       credentialsId: 'CF-DEPLOY-SAP'
 
-  s4SdkQualityChecks:
-    jacocoExcludes:
-      - '**/OrdersService.class'
+  # s4SdkQualityChecks:
+  #   jacocoExcludes:
+  #     - '**/OrdersService.class'
 
   npmAudit:
     auditedAdvisories:

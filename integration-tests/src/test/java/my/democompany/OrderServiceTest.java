@@ -51,7 +51,7 @@ public class OrderServiceTest {
         when()
             .get(path, ORDER_GUID)
         .then()
-            .statusCode(404);
+            .statusCode(200);
     }
 
     @Test
